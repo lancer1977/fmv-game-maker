@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FMV Game Maker</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="stage">
+    <video id="clip" playsinline></video>
+    <div id="fallback" hidden>
+      <h2 id="fallback-title"></h2>
+      <p id="fallback-sub"></p>
+    </div>
+    <div id="prompt" hidden aria-live="assertive"></div>
+    <div id="hud">
+      <div id="title">FMV Game Maker</div>
+      <div id="status">Loading…</div>
+    </div>
+    <div id="flash" hidden></div>
+  </div>
+  <p id="hint">↑ ↓ ← → / WASD — press when the prompt appears</p>
+  <script type="module" src="./player.js"></script>
+</body>
+</html>

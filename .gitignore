@@ -1,0 +1,14 @@
+node_modules/
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log
+.cache/
+dist/
+# Personal / copyrighted adventure packs — keep local
+packs/
+*.mkv
+*.avi
+# Keep synthetic demo clips; ignore accidental large dumps
+examples/**/raw/

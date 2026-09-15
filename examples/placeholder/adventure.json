@@ -1,0 +1,82 @@
+{
+  "id": "placeholder-demo",
+  "title": "Escape the Kitchen",
+  "version": 1,
+  "start": "intro",
+  "assetsBase": "./clips",
+  "nodes": {
+    "intro": {
+      "kind": "scene",
+      "clip": "intro.mp4",
+      "checkpoint": true,
+      "durationMs": 4000,
+      "fallback": {
+        "bg": "#163a45",
+        "title": "The kitchen door creaks open.",
+        "subtitle": "Something bubbles on the stove."
+      },
+      "prompt": {
+        "atMs": 2200,
+        "windowMs": 1400,
+        "input": "ArrowRight",
+        "label": "→"
+      },
+      "onSuccess": "hallway",
+      "onFail": "death_splash",
+      "onTimeout": "death_splash"
+    },
+    "hallway": {
+      "kind": "scene",
+      "clip": "hallway.mp4",
+      "checkpoint": true,
+      "durationMs": 4200,
+      "fallback": {
+        "bg": "#2a2438",
+        "title": "A narrow hallway. Footsteps behind you.",
+        "subtitle": "Duck or bolt?"
+      },
+      "prompt": {
+        "atMs": 2400,
+        "windowMs": 1300,
+        "input": "ArrowDown",
+        "label": "↓"
+      },
+      "onSuccess": "exit",
+      "onFail": "death_stomp",
+      "onTimeout": "death_stomp"
+    },
+    "exit": {
+      "kind": "scene",
+      "clip": "exit.mp4",
+      "durationMs": 3500,
+      "fallback": {
+        "bg": "#1e3d2f",
+        "title": "Daylight. You made it.",
+        "subtitle": "For now."
+      },
+      "onComplete": "intro"
+    },
+    "death_splash": {
+      "kind": "death",
+      "clip": "death_splash.mp4",
+      "durationMs": 2200,
+      "fallback": {
+        "bg": "#4a1515",
+        "title": "SPLASH!",
+        "subtitle": "Into the soup."
+      },
+      "onComplete": "intro"
+    },
+    "death_stomp": {
+      "kind": "death",
+      "clip": "death_stomp.mp4",
+      "durationMs": 2200,
+      "fallback": {
+        "bg": "#3a1020",
+        "title": "STOMP!",
+        "subtitle": "Wrong way."
+      },
+      "onComplete": "hallway"
+    }
+  }
+}
