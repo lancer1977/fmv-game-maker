@@ -6,8 +6,12 @@ node_modules/
 *.log
 .cache/
 dist/
+__pycache__/
+*.pyc
 # Personal / copyrighted adventure packs — keep local
 packs/
+.suggest-cache/
+*-draft.json
 *.mkv
 *.avi
 # Keep synthetic demo clips; ignore accidental large dumps
