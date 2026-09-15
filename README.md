@@ -12,14 +12,12 @@ third-party IP).
 
 ```bash
 cd ~/code/fmv-game-maker
-python3 -m http.server 8765 --directory player
+python3 -m http.server 8765
 ```
 
-Open [http://localhost:8765/?adventure=../examples/placeholder/adventure.json](http://localhost:8765/?adventure=../examples/placeholder/adventure.json)
+Open [http://localhost:8765/player/?adventure=../examples/placeholder/adventure.json](http://localhost:8765/player/?adventure=../examples/placeholder/adventure.json)
 
-Or open `player/index.html` via any static file server that can also serve
-`examples/` (the player fetches the adventure JSON + clips relative to the
-page).
+Serve from the repo root so the player can fetch `examples/` and clips.
 
 Regenerate placeholder clips (optional):
 
