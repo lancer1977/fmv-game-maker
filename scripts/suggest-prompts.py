@@ -46,14 +46,17 @@ PROMPT_TEMPLATE = """You are helping author a Dragon's Lair-style FMV game beat.
 This is one frame from a video clip at about {t_ms} ms.
 
 Decide whether the player must press a direction RIGHT NOW to survive or
-progress. If nothing urgent is happening, say NONE.
+progress (dodge, duck, jump, turn, run toward an exit). Prefer a MOVE when
+something is approaching, attacking, falling, or blocking the path. Use NONE
+only if the frame is calm with no imminent action.
 
-Reply with exactly one of these lines (no other commentary):
-MOVE: ArrowUp | short reason
-MOVE: ArrowDown | short reason
-MOVE: ArrowLeft | short reason
-MOVE: ArrowRight | short reason
-MOVE: NONE | short reason
+Reply with exactly one line in this form (replace the placeholders):
+MOVE: <ArrowUp|ArrowDown|ArrowLeft|ArrowRight|NONE> | <brief reason in your own words>
+
+Examples of good replies:
+MOVE: ArrowRight | bird swoops from the left
+MOVE: ArrowDown | log swings at head height
+MOVE: NONE | character standing still in an open field
 """
 
 
