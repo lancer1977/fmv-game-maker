@@ -17,6 +17,8 @@ python3 -m http.server 8765
 
 Open [http://localhost:8765/player/?adventure=../examples/placeholder/adventure.json](http://localhost:8765/player/?adventure=../examples/placeholder/adventure.json)
 
+Local NAS-derived packs (gitignored under `packs/`): [http://localhost:8765/player/packs.html](http://localhost:8765/player/packs.html)
+
 Serve from the repo root so the player can fetch `examples/` and clips.
 
 Regenerate placeholder clips (optional):
@@ -42,7 +44,7 @@ prompt window. Wrong key or timeout → death node → checkpoint restart.
 |------|------|
 | `docs/scene-graph.md` | V1 scene-graph contract |
 | `schema/adventure.schema.json` | JSON Schema for adventures |
-| `player/` | Browser runtime (HTML/CSS/JS) |
+| `player/` | Browser runtime (HTML/CSS/JS) + local `packs.html` index |
 | `examples/placeholder/` | Demo adventure + synthetic MP4s |
 | `scripts/` | Clip generation + `suggest-prompts.py` (VLM draft prompts) |
 

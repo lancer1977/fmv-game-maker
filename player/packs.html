@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Local packs · FMV Game Maker</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    main {
+      width: min(560px, 100%);
+      display: grid;
+      gap: 1.25rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .lede {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .pack-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .pack-list a {
+      display: block;
+      padding: 1rem 1.1rem;
+      color: var(--ink);
+      text-decoration: none;
+      background: var(--panel);
+      border: 2px solid var(--frame);
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+    .pack-list a:hover,
+    .pack-list a:focus-visible {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+      outline: none;
+    }
+    .pack-list strong {
+      display: block;
+      font-size: 1.05rem;
+      letter-spacing: 0.03em;
+    }
+    .pack-list span {
+      display: block;
+      margin-top: 0.35rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    .foot {
+      margin: 0;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .foot a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>FMV Game Maker</h1>
+    <p class="lede">Local packs on this machine. Clips stay under <code>packs/</code> (gitignored).</p>
+    <ul class="pack-list">
+      <li>
+        <a href="./?adventure=../packs/dl2-00721/adventure.json">
+          <strong>Lair Beat — dl2-00721</strong>
+          <span>Dragon’s Lair II · three → prompts · tail / fireball / crowd</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?adventure=../packs/dl2-37784/adventure.json">
+          <strong>Lair Beat — dl2-37784</strong>
+          <span>Dragon’s Lair II · three → prompts · ghost / giant / tentacle</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?adventure=../examples/placeholder/adventure.json">
+          <strong>Escape the Kitchen</strong>
+          <span>Built-in placeholder demo (synthetic clips)</span>
+        </a>
+      </li>
+    </ul>
+    <p class="foot">Serve from repo root: <code>python3 -m http.server 8765</code> · then open <a href="./packs.html">/player/packs.html</a></p>
+  </main>
+</body>
+</html>
